@@ -1,0 +1,36 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/_layout:: main(~{::main})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="static/css/home_page.css">
+    <title>Shoe Shop</title>
+</head>
+<body>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>ma</th>
+            <th>sl</th>
+            <th>gia</th>
+            <th>mota</th>
+            <th>anh</th>
+            <th>tt</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product,index : ${CTGiays}">
+            <td th:text="${product.ma}"></td>
+            <td th:text="${product.soLuong}"></td>
+            <td th:text="${product.giaBan}"></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+
+</html>
